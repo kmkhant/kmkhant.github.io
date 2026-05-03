@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>KHAING MYEL KHANT | INDEX.TXT</title>
+        <style>
+            :root {
+                --bg: #fafafa;
+                --text: #111;
+                --divider: #333;
+                --link-bg: #111;
+                --link-text: #fafafa;
+                --font-mono:
+                    "Courier New", "Liberation Mono", "Consolas",
+                    "DejaVu Sans Mono", monospace;
+                --font-size-base: 14px;
+                --font-size-sm: 12px;
+                --font-size-xs: 10px;
+                --line-height: 1.35;
+                --padding: 24px;
+                --max-width: 82ch;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                background: #e8e8e0;
+                /* Subtle off-white background for depth */
+                min-height: 100%;
+            }
+
+            body {
+                background-color: var(--bg);
+                color: var(--text);
+                font-family: var(--font-mono);
+                font-size: var(--font-size-base);
+                line-height: var(--line-height);
+                padding: var(--padding);
+                white-space: pre-wrap;
+                max-width: var(--max-width);
+                margin: 0 auto;
+                min-height: 100vh;
+                position: relative;
+                /* Subtle paper texture */
+                box-shadow:
+                    0 0 0 1px rgba(0, 0, 0, 0.06),
+                    0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+
+            /* ── CRT Scanline Overlay ── */
+            body::after {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 9999;
+                background: repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 0, 0, 0.015) 2px,
+                    rgba(0, 0, 0, 0.015) 4px
+                );
+                opacity: 0.7;
+            }
+
+            /* ── Links ── */
+            a {
+                color: var(--text);
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 1px;
+                text-decoration-color: #555;
+                transition: all 0.08s ease;
+            }
+            a:hover {
+                background: var(--link-bg);
+                color: var(--link-text);
+                text-decoration: none;
+                padding: 1px 3px;
+                margin: -1px -3px;
+                border-radius: 1px;
+            }
+            a:visited {
+                text-decoration-color: #888;
+            }
+
+            /* ── ASCII Art Container ── */
+            .ascii-art {
+                font-size: var(--font-size-sm);
+                line-height: 1.15;
+                color: #1a1a1a;
+                display: block;
+                letter-spacing: -0.5px;
+            }
+
+            /* ── Section Dividers ── */
+            .divider-double {
+                color: #444;
+                letter-spacing: -1px;
+            }
+            .divider-single {
+                color: #555;
+                letter-spacing: -1px;
+            }
+
+            /* ── Status Badges ── */
+            .badge-stable {
+                color: #1a7a1a;
+            }
+            .badge-research {
+                color: #7a5a1a;
+            }
+            .badge-wip {
+                color: #7a3a1a;
+            }
+
+            /* ── Blinking Cursor ── */
+            .cursor {
+                animation: blink 1s step-end infinite;
+                font-weight: bold;
+                color: #000;
+            }
+            @keyframes blink {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            /* ── Highlighted Tags ── */
+            .tag {
+                display: inline;
+                color: #444;
+            }
+            .tag::before {
+                content: "[";
+                color: #666;
+            }
+            .tag::after {
+                content: "]";
+                color: #666;
+            }
+
+            /* ── Prompt Styling ── */
+            .prompt {
+                color: #333;
+                font-weight: bold;
+            }
+
+            /* ── Responsive ── */
+            @media (max-width: 700px) {
+                body {
+                    font-size: var(--font-size-sm);
+                    padding: 14px 10px;
+                    max-width: 100%;
+                    border-left: none;
+                    border-right: none;
+                    box-shadow: none;
+                }
+                .ascii-art {
+                    font-size: var(--font-size-xs);
+                    letter-spacing: -1px;
+                }
+                body::after {
+                    background: repeating-linear-gradient(
+                        0deg,
+                        transparent,
+                        transparent 3px,
+                        rgba(0, 0, 0, 0.012) 3px,
+                        rgba(0, 0, 0, 0.012) 6px
+                    );
+                }
+            }
+
+            @media (max-width: 400px) {
+                body {
+                    font-size: 11px;
+                    padding: 10px 6px;
+                    line-height: 1.3;
+                }
+                .ascii-art {
+                    font-size: 8.5px;
+                    letter-spacing: -1.2px;
+                }
+                a:hover {
+                    padding: 0 2px;
+                    margin: 0 -2px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                body {
+                    font-size: 15px;
+                    padding: 32px 36px;
+                }
+                .ascii-art {
+                    font-size: 13px;
+                }
+            }
+
+            /* ── Print Styles ── */
+            @media print {
+                body {
+                    background: #fff;
+                    color: #000;
+                    box-shadow: none;
+                    border: none;
+                    font-size: 12px;
+                    padding: 0;
+                }
+                body::after {
+                    display: none;
+                }
+                .cursor {
+                    display: none;
+                }
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+        </style>
+    </head>
+    <body>       
+        <span class="prompt">guest@khaingmyel.me:~$</span> cat ~/me/about
+        
+        =========================================
+        <span class="prompt">></span> STATUS  : <span class="badge-stable">ACTIVE</span>
+        <span class="prompt">></span> DATE    : Sun May 3 19:33:16 CEST 2026
+        <span class="prompt">></span> UPTIME  : 9490 days
+        <span class="prompt">></span> LOCATION: YANGON, MM
+        =========================================
+        <span class="tag">WHOAMI</span>
+        
+        I'm Khaing Myel, a software engineer 
+        who obsessively builds. I care memory 
+        layout, lines, and loves system-thiking, 
+        design and software architecture.
+
+        =========================================
+        <span class="tag">EXPERTISE</span>
+
+        <span class="prompt">$</span> cat ~/expertise 
+        LANGUAGES  : JS/TS, PY, GO
+        RUNTIMES   : NODE, BUN, PYTHON, GO
+        DATABASES  : MySQL, PG, MONGO, REDIS
+        HARDWARE   : CUDA, MLX, XLA
+        LLMs       : SFT, PEFT, DSL
+        SECURITY   : OWASP_TOP_10
+        SERVERS    : DEBIAN, REDHAT
+        ALWAYS     : SOLID, DRY, KISS
+        
+        =========================================
+        <span class="tag">RESEARCH</span>
+
+        <span class="prompt">$</span> cat ~/research 
+        RESEARCH   : JEPA, GPT
+        =========================================
+        <span class="tag">PGP: 0xCAFEBABE</span> 
+
+        GITHUB: <a href="https://github.com/kmkhant">~/github/kmkhant</a> 
+        MAILTO: <a href="mailto:khaingmyel.dev@gmail.com">~/mail/khaingmyel.dev@gmail.com</a>
+        CV    : <a href="https://khaingmyel.me/cv.pdf">~/opt/cv.pdf</a>
+        
+        =========================================
+        (C) 2026 KHAING MYEL KHAINT
+        =========================================
+        
+        <span class="prompt">guest@khaingmyel.me:~$</span> <span class="cursor">_</span>  
+    </body>
+</html>
