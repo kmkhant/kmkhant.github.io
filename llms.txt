@@ -4,7 +4,7 @@
 
 ## About
 
-I love building scalable things and making the user, developer, and enterprise experience as simple as possible.
+I love shipping products end to end - designing, building, deploying, and operating them - while keeping the user, developer, and enterprise experience as simple as possible.
 
 ## Experience
 
