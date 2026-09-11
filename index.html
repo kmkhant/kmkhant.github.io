@@ -10,7 +10,7 @@
         />
         <meta name="author" content="Khaing Myel Khant" />
         <title>
-            Khaing Myel Khant | Software Engineer &amp; Full-Stack Developer
+            Khaing Myel Khant | Product Engineer &amp; Full-Stack Developer
         </title>
         <link rel="canonical" href="https://kmkhant.github.io/" />
 
@@ -26,9 +26,21 @@
             content="Software engineer in Yangon, Myanmar. Full-stack developer working with React, TypeScript, Go, Node.js, and real-time video conferencing with Mediasoup."
         />
         <meta property="og:url" content="https://kmkhant.github.io/" />
+        <meta
+            property="og:image"
+            content="https://kmkhant.github.io/assets/profile.jpg"
+        />
+        <meta
+            property="og:image:alt"
+            content="Profile photo of Khaing Myel Khant"
+        />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary" />
+        <meta
+            property="twitter:image"
+            content="https://kmkhant.github.io/assets/profile.jpg"
+        />
         <meta
             name="twitter:title"
             content="Khaing Myel Khant | Software Engineer & Full-Stack Developer"
@@ -77,6 +89,20 @@
                 margin-bottom: 3rem;
             }
 
+            .header-inner {
+                display: flex;
+                align-items: center;
+                gap: 1.25rem;
+            }
+
+            .avatar {
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+                object-fit: cover;
+                flex-shrink: 0;
+            }
+
             h1 {
                 font-size: 2.2rem;
                 font-weight: 700;
@@ -84,7 +110,6 @@
             }
 
             .subtitle {
-                margin-top: 0.4rem;
                 color: #555;
             }
 
@@ -142,6 +167,12 @@
             }
 
             a {
+                color: #111;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 1px;
+            }
+            a:hover {
                 color: #0645ad;
             }
 
@@ -156,21 +187,70 @@
     </head>
     <body>
         <header>
-            <h1>Khaing Myel Khant</h1>
-            <p class="subtitle">Software Engineer</p>
+            <div class="header-inner">
+                <img
+                    src="assets/profile.jpg"
+                    alt="Khaing Myel Khant"
+                    class="avatar"
+                />
+                <div>
+                    <h1>Khaing Myel Khant</h1>
+                    <p class="subtitle">
+                        Product Engineer: full-stack, DevOps & system design
+                    </p>
+                </div>
+            </div>
         </header>
 
         <main>
             <section id="about">
                 <h2>About</h2>
                 <p>
-                    I love building scalable things and making the user,
-                    developer, and enterprise experience as simple as possible.
+                    I build software end-to-end — from UI and backend through
+                    deployment and the infrastructure that runs it.
                 </p>
             </section>
 
             <section id="experience">
                 <h2>Experience</h2>
+
+                <div class="job">
+                    <div class="job-head">
+                        <strong
+                            ><a href="https://solaratek.net/"
+                                >SolaraTek</a
+                            ></strong
+                        >
+                        <span class="years">2025 - Present</span>
+                    </div>
+                    <p>
+                        Co-founded a tech startup in Yangon building
+                        multi-tenant software - school management, payment,
+                        market-price, and map-centric real estate systems.
+                    </p>
+                    <ul>
+                        <li>
+                            CTO - led a tech team of 9, covering architecture,
+                            service topology, design patterns, AI dev setups,
+                            hiring, code reviews, and mentorship across UI/UX,
+                            cloud, and server administration.
+                        </li>
+                        <li>
+                            Cut third-party tool subscription costs by 90% with
+                            cloud and open-source deployments; improved
+                            performance 2x.
+                        </li>
+                        <li>
+                            Built a proprietary map system with custom
+                            geospatial encoding/decoding, removing the need for
+                            third-party map solutions.
+                        </li>
+                        <li>
+                            Integrated AI Chatbots and real-time payment systems
+                            (Dinger, third-party).
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="job">
                     <div class="job-head">
@@ -184,14 +264,11 @@
                     <p>Full-Stack Developer.</p>
                     <ul>
                         <li>
-                            Designed UI and system design for a real-time video
-                            conferencing product.
+                            Designed and Developed a Google Meet-like video
+                            conferencing app with custom media server,
+                            fine-grained permission/data controls for streaming
+                            user's data.
                         </li>
-                        <li>
-                            Developed a Google Meet-like video conferencing app
-                            with Mediasoup.
-                        </li>
-                        <li>Implemented video streaming and screen sharing.</li>
                     </ul>
                 </div>
 
@@ -211,6 +288,32 @@
                             taungthutada.
                         </li>
                     </ul>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Consumer Projects</h2>
+
+                <div class="job">
+                    <div class="job-head">
+                        <strong
+                            ><a href="https://solaratek.net/"
+                                >SolaraTek</a
+                            ></strong
+                        >
+                    </div>
+                    <p>Company website for my startup.</p>
+                </div>
+
+                <div class="job">
+                    <div class="job-head">
+                        <strong
+                            ><a href="https://demo.aeinmap.com/"
+                                >AEIN Map</a
+                            ></strong
+                        >
+                    </div>
+                    <p>Map-centric real estate system demo.</p>
                 </div>
             </section>
 
