@@ -10,7 +10,7 @@
         />
         <meta name="author" content="Khaing Myel Khant" />
         <title>
-            Khaing Myel Khant | Product Engineer &amp; Full-Stack Developer
+            Khaing Myel Khant | Software Engineer &amp; Full-Stack Developer
         </title>
         <link rel="canonical" href="https://kmkhant.github.io/" />
 
@@ -63,10 +63,24 @@
             }
         </script>
         <style>
+            :root {
+                --bg: #fdfcf9;
+                --surface: #fff;
+                --text: #111;
+                --muted: #555;
+                --faint: #777;
+                --border: rgba(0, 0, 0, 0.08);
+                --radius: 10px;
+            }
+
             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
             }
 
             body {
@@ -78,114 +92,263 @@
                     sans-serif;
                 font-size: 16px;
                 line-height: 1.7;
-                color: #1a1a1a;
-                background: #fff;
+                color: var(--text);
+                background: var(--bg);
                 max-width: 42rem;
                 margin: 0 auto;
-                padding: 4rem 1.5rem;
+                padding: 0 1.5rem;
             }
 
-            header {
+            /* ── Nav ── */
+            .nav {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.25rem;
+                padding: 1rem 0;
+                background: rgba(253, 252, 249, 0.85);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border);
                 margin-bottom: 3rem;
             }
+            .nav a {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: var(--muted);
+                text-decoration: none;
+                transition: color 0.15s ease;
+            }
+            .nav a:hover {
+                color: var(--text);
+            }
 
+            /* ── Header ── */
+            header {
+                position: relative;
+                margin-bottom: 3rem;
+            }
+            header::before {
+                content: "";
+                position: absolute;
+                top: -8rem;
+                left: -8rem;
+                width: 24rem;
+                height: 24rem;
+                background: radial-gradient(
+                    circle,
+                    rgba(0, 0, 0, 0.05),
+                    transparent 70%
+                );
+                z-index: -1;
+                pointer-events: none;
+            }
             .header-inner {
                 display: flex;
                 align-items: center;
-                gap: 1.25rem;
+                gap: 1.5rem;
             }
-
             .avatar {
-                width: 72px;
-                height: 72px;
+                width: 80px;
+                height: 80px;
                 border-radius: 50%;
                 object-fit: cover;
                 flex-shrink: 0;
+                border: 1px solid var(--border);
             }
-
             h1 {
-                font-size: 2.2rem;
-                font-weight: 700;
+                font-size: 2.4rem;
+                font-weight: 650;
                 letter-spacing: -0.03em;
+                line-height: 1.1;
             }
-
             .subtitle {
-                color: #555;
-            }
-
-            section {
-                margin-bottom: 2.5rem;
-            }
-
-            h2 {
+                margin-top: 0.4rem;
+                color: var(--muted);
                 font-size: 1.05rem;
+            }
+
+            /* ── Cards ── */
+            .card {
+                border: 1px solid var(--border);
+                border-radius: 0;
+                padding: 1.75rem;
+                margin-bottom: 1.5rem;
+                scroll-margin-top: 5rem;
+            }
+            .card h2 {
+                font-size: 0.75rem;
                 font-weight: 600;
                 text-transform: uppercase;
-                letter-spacing: 0.05em;
-                color: #333;
+                letter-spacing: 0.12em;
+                color: var(--faint);
+                margin-bottom: 1.25rem;
+            }
+            .card p {
                 margin-bottom: 1rem;
             }
-
-            p {
-                margin-bottom: 1rem;
+            .card ul:last-child,
+            .card p:last-child {
+                margin-bottom: 0;
             }
 
+            /* ── Jobs (experience / projects / education) ── */
             .job {
                 margin-bottom: 1.75rem;
             }
-
+            .job:last-child {
+                margin-bottom: 0;
+            }
             .job-head {
                 display: flex;
                 justify-content: space-between;
+                align-items: baseline;
                 gap: 1rem;
                 flex-wrap: wrap;
-                margin-bottom: 0.25rem;
+                margin-bottom: 0.4rem;
             }
-
             .job-head strong {
                 font-size: 1.05rem;
+                font-weight: 600;
             }
-
+            .job-head strong a {
+                color: var(--text);
+            }
             .years {
-                color: #888;
+                color: var(--faint);
+                font-size: 0.85rem;
                 white-space: nowrap;
+                font-variant-numeric: tabular-nums;
             }
-
-            .job p,
-            .job ul {
-                color: #444;
+            .job p {
                 font-size: 0.95rem;
+                color: var(--text);
+            }
+            .job ul {
+                list-style: none;
+                padding-left: 0;
+                font-size: 0.95rem;
+                color: var(--text);
+            }
+            .job li {
+                position: relative;
+                padding-left: 1.1rem;
+                margin-bottom: 0.4rem;
+            }
+            .job li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.55em;
+                width: 0.35rem;
+                height: 0.35rem;
+                border-radius: 50%;
+                background: #c9c9c9;
             }
 
-            ul {
-                list-style: disc;
-                padding-left: 1.5rem;
+            /* ── Skills ── */
+            .skills-grid {
+                list-style: none;
+                padding: 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+                gap: 0.75rem;
+            }
+            .skill {
+                border: none;
+                border-bottom: 1px solid var(--border);
+                padding: 0.6rem 0;
+                font-size: 0.9rem;
+                color: var(--text);
+                transition: border-color 0.15s ease;
+            }
+            .skill:hover {
+                border-bottom-color: rgba(0, 0, 0, 0.2);
+            }
+            .skill strong {
+                display: block;
+                font-size: 0.68rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: var(--faint);
+                margin-bottom: 0.3rem;
             }
 
-            li {
-                margin-bottom: 0.35rem;
+            /* ── Links ── */
+            .link-list {
+                list-style: none;
+                padding: 0;
+            }
+            .link-list li {
+                margin-bottom: 0.5rem;
+            }
+            .link-list li:last-child {
+                margin-bottom: 0;
             }
 
+            /* ── Global links ── */
             a {
-                color: #111;
+                color: var(--text);
                 text-decoration: underline;
                 text-underline-offset: 3px;
                 text-decoration-thickness: 1px;
+                text-decoration-color: rgba(0, 0, 0, 0.25);
+                transition: text-decoration-color 0.15s ease;
             }
             a:hover {
-                color: #0645ad;
+                text-decoration-color: var(--text);
             }
 
+            /* ── Footer ── */
             footer {
                 margin-top: 4rem;
-                padding-top: 1.5rem;
-                border-top: 1px solid #eee;
-                color: #888;
-                font-size: 0.9rem;
+                padding: 1.5rem 0 2rem;
+                border-top: 1px solid var(--border);
+                color: var(--faint);
+                font-size: 0.85rem;
+            }
+
+            /* ── Responsive ── */
+            @media (max-width: 600px) {
+                body {
+                    padding: 0 1rem;
+                }
+                h1 {
+                    font-size: 1.9rem;
+                }
+                .avatar {
+                    width: 64px;
+                    height: 64px;
+                }
+                .header-inner {
+                    gap: 1.1rem;
+                }
+                .card {
+                    padding: 1.25rem;
+                }
+                .skills-grid {
+                    grid-template-columns: 1fr;
+                }
+                .nav {
+                    gap: 1rem;
+                }
             }
         </style>
     </head>
     <body>
+        <nav class="nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#links">Links</a>
+        </nav>
+
         <header>
             <div class="header-inner">
                 <img
@@ -196,22 +359,22 @@
                 <div>
                     <h1>Khaing Myel Khant</h1>
                     <p class="subtitle">
-                        Product Engineer: full-stack, DevOps & system design
+                        Product Engineer — Full-Stack, DevOps, System
                     </p>
                 </div>
             </div>
         </header>
 
         <main>
-            <section id="about">
+            <section id="about" class="card">
                 <h2>About</h2>
                 <p>
-                    I build software end-to-end — from UI and backend through
-                    deployment and the infrastructure that runs it.
+                    I love building scalable things and making the user,
+                    developer, and enterprise experience as simple as possible.
                 </p>
             </section>
 
-            <section id="experience">
+            <section id="experience" class="card">
                 <h2>Experience</h2>
 
                 <div class="job">
@@ -246,8 +409,8 @@
                             third-party map solutions.
                         </li>
                         <li>
-                            Integrated AI Chatbots and real-time payment systems
-                            (Dinger, third-party).
+                            Integrated AI/LLMs with LangChain and real-time
+                            payment systems (Dinger, third-party).
                         </li>
                     </ul>
                 </div>
@@ -264,11 +427,14 @@
                     <p>Full-Stack Developer.</p>
                     <ul>
                         <li>
-                            Designed and Developed a Google Meet-like video
-                            conferencing app with custom media server,
-                            fine-grained permission/data controls for streaming
-                            user's data.
+                            Designed UI and system design for a real-time video
+                            conferencing product.
                         </li>
+                        <li>
+                            Developed a Google Meet-like video conferencing app
+                            with Mediasoup.
+                        </li>
+                        <li>Implemented video streaming and screen sharing.</li>
                     </ul>
                 </div>
 
@@ -291,8 +457,8 @@
                 </div>
             </section>
 
-            <section id="projects">
-                <h2>Consumer Projects</h2>
+            <section id="projects" class="card">
+                <h2>Projects</h2>
 
                 <div class="job">
                     <div class="job-head">
@@ -317,7 +483,7 @@
                 </div>
             </section>
 
-            <section id="education">
+            <section id="education" class="card">
                 <h2>Education</h2>
 
                 <div class="job">
@@ -337,55 +503,60 @@
                 </div>
             </section>
 
-            <section id="skills">
+            <section id="skills" class="card">
                 <h2>Skills</h2>
-                <ul>
-                    <li>
-                        <strong>Stack:</strong> TypeScript, Python, PHP, Go,
-                        Bash
+                <ul class="skills-grid">
+                    <li class="skill">
+                        <strong>Stack</strong>TypeScript, Python, PHP, Go, Bash
                     </li>
-                    <li>
-                        <strong>Frontend:</strong> React, Next.js, Tailwind,
+                    <li class="skill">
+                        <strong>Frontend</strong>React, Next.js, Tailwind,
                         vanilla HTML/CSS/JS
                     </li>
-                    <li>
-                        <strong>Backend:</strong> Express.js, NestJS, ElysiaJS,
+                    <li class="skill">
+                        <strong>Backend</strong>Express.js, NestJS, ElysiaJS,
                         Laravel, Gin, WebSockets, SSE
                     </li>
-                    <li>
-                        <strong>Databases:</strong> MySQL, PostgreSQL, MongoDB,
+                    <li class="skill">
+                        <strong>Databases</strong>MySQL, PostgreSQL, MongoDB,
                         Redis
                     </li>
-                    <li>
-                        <strong>Data &amp; ORMs:</strong> SQL, Schema Design,
-                        Indexing, Backups, Tuning; Prisma, Drizzle, TypeORM
+                    <li class="skill">
+                        <strong>Data &amp; ORMs</strong>SQL, schema design,
+                        indexing, backups, tuning; Prisma, Drizzle, TypeORM
                     </li>
-                    <li>
-                        <strong>Caching &amp; Queues:</strong> Redis, BullMQ
+                    <li class="skill">
+                        <strong>Caching &amp; Queues</strong>Redis, BullMQ
                     </li>
-                    <li>
-                        <strong>DevOps:</strong> Docker, Nginx, GitHub Actions,
+                    <li class="skill">
+                        <strong>DevOps</strong>Docker, Nginx, GitHub Actions,
                         PM2, git-pull &amp; Docker-build deploys
                     </li>
-                    <li><strong>Cloud:</strong> AWS, GCP, Alibaba Cloud</li>
-                    <li><strong>Testing:</strong> Jest, Bun, Vitest</li>
-                    <li>
-                        <strong>Sysadmin:</strong> Server Monitoring, Reverse
-                        Proxies, Internal Networks, Tunnels, Malware Removal,
-                        Outage Handling
+                    <li class="skill">
+                        <strong>Cloud</strong>AWS, GCP, Alibaba Cloud
                     </li>
-                    <li>
-                        <strong>AI/LLMs:</strong> SFT, PEFT, Domain-Specific
-                        Languages with LangChain/LangGraph, model quantization
+                    <li class="skill">
+                        <strong>Testing</strong>Jest, Bun, Vitest
                     </li>
-                    <li><strong>Security:</strong> OWASP Top 10</li>
-                    <li><strong>Servers:</strong> Debian, Ubuntu, RedHat</li>
+                    <li class="skill">
+                        <strong>Sysadmin</strong>Server monitoring, reverse
+                        proxies, internal networks, tunnels, malware removal,
+                        outage handling
+                    </li>
+                    <li class="skill">
+                        <strong>AI/LLMs</strong>SFT, PEFT, domain-specific
+                        languages with LangChain/LangGraph, model quantization
+                    </li>
+                    <li class="skill"><strong>Security</strong>OWASP Top 10</li>
+                    <li class="skill">
+                        <strong>Servers</strong>Debian, Ubuntu, RedHat
+                    </li>
                 </ul>
             </section>
 
-            <section id="links">
+            <section id="links" class="card">
                 <h2>Links</h2>
-                <ul>
+                <ul class="link-list">
                     <li>
                         GitHub:
                         <a href="https://github.com/kmkhant">kmkhant</a>
