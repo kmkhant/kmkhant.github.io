@@ -1,0 +1,34 @@
+# Khaing Myel Khant
+
+> Product Engineer - full-stack, DevOps & system design. Software engineer based in Yangon, Myanmar, and co-founder & CTO of SolaraTek.
+
+## About
+
+I love building scalable things and making the user, developer, and enterprise experience as simple as possible.
+
+## Experience
+
+- **SolaraTek (2025 - Present)** - Co-founder & CTO. Building multi-tenant software: school management, payment, market-price, and map-centric real estate systems. Led a tech team of 9, covering architecture, design patterns, AI setups, hiring, and mentorship. Cut third-party tool subscription costs by 90%, improved performance 2x, and built a proprietary map system with custom geospatial encoding/decoding.
+- **SSP Ventures (2024 - 2025)** - Full-Stack Developer. Led a team of two, handled cloud usage cost estimations, wrote automated deployment scripts for a cloud VPS, and developed both UI and backend. Built a Google Meet-like real-time video conferencing app with Mediasoup, including video streaming and screen sharing.
+- **Taungthutada (2022 - 2023)** - Frontend Developer. Designed and developed the frontend UI of taungthutada.
+
+## Education
+
+- University of Computer Studies, Mandalay - B.C.Tech (Computer Communication and Networks), graduated 2025, class of 2016. GPA 3.20/4.0.
+
+## Skills
+
+- Stack: TypeScript, Python, PHP, Go, Bash
+- Frontend: React, Next.js, Tailwind, vanilla HTML/CSS/JS
+- Backend: Express.js, NestJS, ElysiaJS, Laravel, Gin, WebSockets, SSE
+- Databases: MySQL, PostgreSQL, MongoDB, Redis (Prisma, Drizzle, TypeORM, BullMQ)
+- DevOps: Docker, Nginx, GitHub Actions, PM2; AWS, GCP, Alibaba Cloud
+- Sysadmin: server monitoring, reverse proxies, internal networks, tunnels, malware removal, outage handling
+- AI/LLMs: SFT, PEFT, domain-specific languages with LangChain/LangGraph, model quantization
+
+## Links
+
+- [Portfolio](https://kmkhant.github.io/): personal site
+- [GitHub](https://github.com/kmkhant): github profile
+- [SolaraTek](https://solaratek.net/): my startup's company website
+- [AEIN Map demo](https://demo.aeinmap.com/): map-centric real estate system demo
