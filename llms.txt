@@ -1,34 +1,47 @@
 # Khaing Myel Khant
 
-> Product Engineer - full-stack, DevOps & system design. Software engineer based in Yangon, Myanmar, and co-founder & CTO of SolaraTek.
+> Full-stack product engineer in Yangon, Myanmar, shipping software end to end - design, build, deploy, operate.
 
-## About
+## Summary
 
-I love shipping products end to end - designing, building, deploying, and operating them - while keeping the user, developer, and enterprise experience as simple as possible.
+I'm a full-stack product engineer with a proven record of designing, building, deploying, and operating end-to-end products. I specialize in AI-assisted engineering, real-time systems, and cost-efficient cloud infrastructure, and I've led cross-functional teams of up to 9 engineers to deliver fintech, edtech, and marketplace platforms at scale.
 
 ## Experience
 
-- **SolaraTek (2025 - Present)** - Co-founder & CTO. Building multi-tenant software: school management, payment, market-price, and map-centric real estate systems. Led a tech team of 9, covering architecture, design patterns, AI setups, hiring, and mentorship. Cut third-party tool subscription costs by 90%, improved performance 2x, and built a proprietary map system with custom geospatial encoding/decoding.
-- **SSP Ventures (2024 - 2025)** - Full-Stack Developer. Led a team of two, handled cloud usage cost estimations, wrote automated deployment scripts for a cloud VPS, and developed both UI and backend. Built a Google Meet-like real-time video conferencing app with Mediasoup, including video streaming and screen sharing.
-- **Taungthutada (2022 - 2023)** - Frontend Developer. Designed and developed the frontend UI of taungthutada.
+- **SolaraTek (2025 - Present)** - Lead Product Engineer. Lead a cross-functional team of 9 across UI/UX, mobile, full-stack, and DevOps. Ship multi-tenant products: school management, digital wallet, loan management, market price intelligence, and map-centric real estate. Set up AI-assisted engineering workflows and self-hosted open-source tools to cut software costs, and built a custom geospatial system with a proprietary map platform for the real estate product.
+- **SSP Ventures (2024 - 2025)** - Built a Google Meet-like video conferencing platform with a custom media server. Full-stack - frontend with Next.js and Tailwind, backend with Express.js and TypeScript; designed the system and cloud architecture.
+- **Taungthutada (2021 - 2023)** - Developed and maintained the Taungthutada website UI. Next.js with SSG/SSR/ISR, Sanity CMS, and edge functions for fast page loads.
+- **TecXplorer (2024)** - Automated the deployment process for an ERP system, reducing errors, downtime, and deployment time.
+- **Nude Society (2021)** - Built the original version of the e-commerce website for a Mandalay-based sneaker retailer with Next.js, React, and TypeScript, using Sanity CMS webhooks for cache revalidation and Algolia search indexing.
 
 ## Education
 
-- University of Computer Studies, Mandalay - B.C.Tech (Computer Communication and Networks), graduated 2025, class of 2016. GPA 3.20/4.0.
+- University of Computer Studies, Mandalay - Bachelor of Computer Technology (Telecommunication and Networks), graduated 2025.
 
 ## Skills
 
-- Stack: TypeScript, Python, PHP, Go, Bash
-- Frontend: React, Next.js, Tailwind, vanilla HTML/CSS/JS
-- Backend: Express.js, NestJS, ElysiaJS, Laravel, Gin, WebSockets, SSE
-- Databases: MySQL, PostgreSQL, MongoDB, Redis (Prisma, Drizzle, TypeORM, BullMQ)
-- DevOps: Docker, Nginx, GitHub Actions, PM2; AWS, GCP, Alibaba Cloud
-- Sysadmin: server monitoring, reverse proxies, internal networks, tunnels, malware removal, outage handling
-- AI/LLMs: SFT, PEFT, domain-specific languages with LangChain/LangGraph, model quantization
+- Languages: TypeScript, JavaScript, PHP, Python, SQL, Bash
+- Frontend: React, Next.js, Redux, React Query, Tailwind CSS, Figma
+- Backend: Node.js, Bun, NestJS, ElysiaJS, Fastify, Express.js, Laravel, Laravel Reverb, WebSockets, SSE, REST APIs
+- AI/ML: LangChain, LangGraph, RAG, PyTorch, NumPy, Model Quantization, AI Agents, Prompt Engineering
+- Databases: PostgreSQL, Redis, Schema Design, Geospatial Indexing
+- DevOps & Cloud: Docker, Nginx, Jenkins, CI/CD, AWS, Alibaba Cloud, Vercel, Load Balancing, Proxy Servers, Server Monitoring, Log Analysis
+- Testing: Jest, Vitest
+- Tools: Git, GitHub, Google Analytics, Firebase Cloud Messaging, Sanity CMS, Algolia, Excalidraw
+- DNS: Cloudflare, DNS resolution and domain management
+
+## Languages
+
+- Burmese - Native
+- English - Professional proficiency
 
 ## Links
 
 - [Portfolio](https://kmkhant.github.io/): personal site
 - [GitHub](https://github.com/kmkhant): github profile
 - [SolaraTek](https://solaratek.net/): my startup's company website
+- [SSP Ventures](https://www.sspventuresmm.com/): past employer
+- [Taungthutada](https://taungthutada.com/): past employer
+- [Nude Society](https://nudesocietymm.com/): e-commerce site I built
 - [AEIN Map demo](https://demo.aeinmap.com/): map-centric real estate system demo
+- [University of Computer Studies, Mandalay](https://www.ucsm.edu.mm/): my university
